@@ -1,0 +1,10 @@
+#include <iostream>
+#include "disk.hpp"
+
+Disk::Disk (size_t hn) {
+	hbuf_num = hn;
+	cout << "Disk::Disk" << bhuf_num << "\n";
+}
+Disk::~Disk (size_t hn) {
+	cout << "Disk::Disk" << bhuf_num << "\n";
+}
