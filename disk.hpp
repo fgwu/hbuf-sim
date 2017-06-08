@@ -5,9 +5,10 @@
  * real disk. 
  */
 class Disk {
+private:
 	size_t total_zone_num;
 	size_t hbuf_num;
-
+public:
 	Disk(size_t);
 	~Disk();
 };
