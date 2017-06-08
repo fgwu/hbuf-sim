@@ -1,10 +1,8 @@
+#include <iostream>
 #include "stats.hpp"
 
-/*
- * This class have all the statistics: cost, etc.
- */
-class Stats {
+
+Stats::Stats(){ cout << "Stats:Stats\n";}
 
 
-
-};
+Stats::~Stats(){ cout << "Stats:~Stats\n";}

@@ -1,10 +1,14 @@
-all: disk.o sim.o
-	g++ -o sim disk.o sim.o
+CXX = g++
+CXXFLAGS = -Wall -g
+OBJ = disk.o main.o \
+	stats.o
+PROG = sim
 
-disk.o: disk.cpp disk.hpp
-	g++ -c disk.cpp
-sim.o: sim.cpp
-	g++ -c sim.cpp
+$(PROG): $(OBJ)
+	g++ -o $(PROG) $(OBJ)
 
+$(OBJ): global.hpp
+
+.PHONY: clean
 clean:
-	-rm sim *.o
+	-rm $(PROG) $(OBJ)
